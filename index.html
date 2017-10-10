@@ -1,0 +1,491 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NFL Stadium Map</title>
+    <link rel="stylesheet" href="urbn.css">
+    <script src="urbn.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container" align='center'>
+      <h1>Welcome to the Stadium Locator!</h1>
+      <h2>Click a logo to obtain directions</h2>
+      <table class="table" id="teams">
+        <thead>
+          <tr>
+            <td>Team</td>
+            <td>Logo</td>
+            <td>Stadium Name</td>
+            <td>Snap Shot</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arizona Cardinals</td>
+            <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=University+of+phoenix+stadium" target="map"><img src="helmets\cardinals.jpg" height="150" width="150" alt=""></a></td>
+            <td>University of Phoenix Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=University+Of+phoenix+stadium" allowfullscreen>
+              </iframe></td>
+          </tr>
+          <tr>
+            <td>Atlanta Falcons</td>
+            <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Mercedez-Benz+Stadium" target="map"><img src="helmets\falcons.png" height="150" width="150" alt=""></a></td>
+            <td>Mercedes-Benz Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Mercedes-Benz+Stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Baltimore Ravens</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=MT+BANK+Stadium" target="map"><img src="helmets\ravens.png" height="150" width="150" alt=""></a></td>
+            <td>M&T Bank Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=MT+BANK+STADIUM" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Buffalo Bills</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=New+ERA+FIELD" target="map"><img src="helmets\bills.png" height="150" width="150" alt=""></a></td>
+            <td>M&T Bank Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=MT+BANK+STADIUM" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Carolina Panthers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=BANK+OF+AMERICA+STADIUM" target="map"><img src="helmets\panthers.png" height="150" width="150" alt=""></a></td>
+            <td>Bank of America Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=BANK+OF+AMERICA+STADIUM" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Chicago Bears</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Solider+field" target="map"><img src="helmets\bears.png" height="150" width="150" alt=""></a></td>
+            <td>Soldier Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Soldier+Field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Cincinnati Bengals</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Paul+Brown+stadium" target="map"><img src="helmets\bengals.png" height="150" width="150" alt=""></a></td>
+            <td>Paul Brown Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Paul+brown+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Cleveland Browns</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=FirstEnergy+stadium" target="map"><img src="helmets\browns.jpg" height="150" width="150" alt=""></a></td>
+            <td>FirstEnergy Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=FirstEnergy+Stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Dallas Cowboys</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=ATT+Stadium" target="map"><img src="helmets\cowboys.png" height="150" width="150" alt=""></a></td>
+            <td>AT&T Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=ATT+STADIUM" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Denver Broncos</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Sports+Authority+Field" target="map"><img src="helmets\broncos.png" height="150" width="150" alt=""></a></td>
+            <td>Sports Authority Field at Mile High</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Sports+authority+field+at+mile+high" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Green Bay Packers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Lambeau+Field" target="map"><img src="helmets\packers.png" height="150" width="150" alt=""></a></td>
+            <td>Lambeau Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Lambeau+field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Detroit Lions</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Ford+FIELD" target="map"><img src="helmets\Lions.png" height="150" width="150" alt=""></a></td>
+            <td>Ford Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Ford+FIELD" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Houston Texans</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=NRG+Stadium" target="map"><img src="helmets\Texans.png" height="150" width="150" alt=""></a></td>
+            <td>NRG Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=NRG+Stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Indianapolis Colts</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Lucus+oil+stadium" target="map"><img src="helmets\colts.jpg" height="150" width="150" alt=""></a></td>
+            <td>Lucus Oil Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Lucus+oil+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Jacksonville Jaguars</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Everbank+field" target="map"><img src="helmets\jaguars.jpg" height="150" width="150" alt=""></a></td>
+            <td>EverBank Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=everbank+field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Kansas City Chiefs</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Arrowhead+stadium" target="map"><img src="helmets\chiefs.jpg" height="150" width="150" alt=""></a></td>
+            <td>Arrowhead Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=arrowhead+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Los Angeles Chargers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=stubhub+center" target="map"><img src="helmets\chargers.png" height="150" width="150" alt=""></a></td>
+            <td>Stubhub Center</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=stubhub+center" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Miami Dolphins</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Hard+Rock+center" target="map"><img src="helmets\dolphins.png" height="150" width="150" alt=""></a></td>
+            <td>Hard Rock Center</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Hard+Rock+center,sunrise+florida" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Los Angeles Rams</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Los+Angeles+Memorial+Coliseum" target="map"><img src="helmets\rams.png" height="150" width="150" alt=""></a></td>
+            <td>Los Angeles Memorial Coliseum</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Los+Angeles+Memorial+Colisem" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Minnesota Vikings</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=US+Bank+stadium" target="map"><img src="helmets\vikings.png" height="150" width="150" alt=""></a></td>
+            <td>US Bank Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=US+BANK+Stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>New England Patriots</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Gillette+Stadium" target="map"><img src="helmets\patriots.png" height="150" width="150" alt=""></a></td>
+            <td>Gillette Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Gillette+Stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>New Orleans Saints</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Mercedez-Benz+Superdome" target="map"><img src="helmets\saints.png" height="150" width="150" alt=""></a></td>
+            <td>Mercedez-Benz Superdome</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Mercedez-Benz+Superdome" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>New York Giants</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Metlife+stadium" target="map"><img src="helmets\giants.png" height="150" width="150" alt=""></a></td>
+            <td>MetLife Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Metlife+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>New York Jets</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Metlife+stadium" target="map"><img src="helmets\jets.png" height="150" width="150" alt=""></a></td>
+            <td>MetLife Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Metlife+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Oakland Raiders</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Oakland+Alameda+County+Coliseum" target="map"><img src="helmets\raiders.png" height="150" width="150" alt=""></a></td>
+            <td>Oakland–Alameda County Coliseum</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Oakland–Alameda+County+Coliseum" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Philadelphia Eagles</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=Lincoln+Financial+Field" target="map"><img src="helmets\eagles.png" height="150" width="150" alt=""></a></td>
+            <td>Lincoln Financial Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=Lincoln+Financial+Field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Pittsburgh Steelers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=heinz+Field" target="map"><img src="helmets\steelers.png" height="150" width="150" alt=""></a></td>
+            <td>Heinz Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=heinz+Field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>San Fransico 49ers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=levis+stadium" target="map"><img src="helmets\49ers.png" height="150" width="150" alt=""></a></td>
+            <td>Levi's Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=levis+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Seattle Seahawks</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=centurylink+field" target="map"><img src="helmets\seahawks.png" height="150" width="150" alt=""></a></td>
+            <td>CenturyLink Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=centurylink+field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Tampa Bay Buccaneers</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=raymond+james+stadium" target="map"><img src="helmets\bucs.png" height="150" width="150" alt=""></a></td>
+            <td>Raymond James Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=raymond+james+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Tennessee Titans</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=nissan+stadium" target="map"><img src="helmets\titans.jpg" height="150" width="150" alt=""></a></td>
+            <td>Nissan Stadium</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=nissan+stadium" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>Washington Redskins</td>
+              <td><a href="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0&origin=Philadelphia&destination=fedex+field" target="map"><img src="helmets\redskins.png" height="150" width="150" alt=""></a></td>
+            <td>FedEx Field</td>
+            <td>
+              <iframe
+                width="150"
+                height="150"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZj0W3utWc9bwUX9W8q4OjxEeQy3Le4_0
+                &q=fedex+field" allowfullscreen>
+              </iframe>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</body>
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+	       oTable = $('#teams').dataTable({
+		         "sPaginationType": "full_numbers",
+		           "scrollX": true,
+		             "scrollY": true
+	              });
+      } );
+ </script>
+
+
+
+</html>
